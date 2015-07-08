@@ -14,10 +14,6 @@ template<typename T>
 class Space
 {
 public:
-	Space (T defaultValue) :
-    	m_defaultValue( defaultValue ){
-		
-	}
 	//virtual ~Space ();
 
 	T& get(int i, int j){
@@ -35,7 +31,6 @@ public:
 	}
 	
 private:
-	T m_defaultValue;
 	std::map< std::pair<int,int>, SpaceChunk<T>> m_map;
 };
 
